@@ -365,7 +365,7 @@ select option {
   animation: none;
   margin: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .numbers,
   .tabla,
   .register-form,
