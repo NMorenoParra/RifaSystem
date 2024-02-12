@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -74,5 +75,292 @@ li:hover {
   nav {
     width: 100%;
     padding-right: 1.875rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+
+section {
+  width: 100%;
+  height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1%;
+  flex-direction: column;
+}
+
+.numbers {
+  border: 0.3rem solid #8aecf6;
+  width: 50%;
+  height: 70%;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
+  align-items: center;
+  justify-content: center;
+}
+.span {
+  font-size: 1.5rem;
+  display: inline-flex;
+  width: 10%;
+  height: 9.09090909091%;
+  border: 0.0625rem solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+section h2 {
+  color: #0087f4;
+  font-size: 2rem;
+  animation: animacion 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes animacion {
+  0% {
+    font-size: 2rem;
+  }
+  10% {
+    font-size: 2.1rem;
+  }
+  20% {
+    font-size: 2.2rem;
+  }
+  30% {
+    font-size: 2.3rem;
+  }
+  40% {
+    font-size: 2.4rem;
+  }
+  50% {
+    font-size: 2.5rem;
+  }
+  60% {
+    font-size: 2.6rem;
+  }
+  70% {
+    font-size: 2.7rem;
+  }
+  80% {
+    font-size: 2.8rem;
+  }
+  90% {
+    font-size: 2.9rem;
+  }
+  100% {
+    font-size: 3rem;
+  }
+}
+
+.disabled {
+  background-color: #0089f4;
+  width: 2.5rem;
+  height: 2.5rem;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.tabla {
+  width: 50%;
+  height: 90%;
+  overflow-y: auto;
+}
+
+/* Estilo para la barra de desplazamiento */
+.tabla::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra */
+}
+
+/* Estilo para el riel de la barra de desplazamiento */
+.tabla::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de fondo del riel */
+  border-radius: 10px; /* Radio de borde del riel */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento */
+.tabla::-webkit-scrollbar-thumb {
+  background-color: #9cceeb; /* Color del pulgar */
+  border-radius: 10px; /* Radio de borde del pulgar */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento cuando está en estado "hover" */
+.tabla::-webkit-scrollbar-thumb:hover {
+  background-color: #4687f4;
+}
+
+.person {
+  width: 100%;
+}
+
+.person tbody tr:nth-child(2n) {
+  background-color: #a9cdea;
+}
+
+.person thead tr {
+  background-color: #0087f4;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.person td {
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 1.15rem;
+}
+
+.person .link,
+.person .link:visited {
+  cursor: pointer !important;
+  color: #f7d26c !important;
+}
+
+.person .link:hover {
+  transform: scale(2.05) !important;
+}
+
+.register-form {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.4rem solid lightgray;
+  border-radius: 0.65rem;
+  overflow-y: auto;
+}
+
+.register-form h3 {
+  font-size: 2.5rem;
+  color: #0089f4;
+}
+
+.register-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 15%;
+}
+
+.register-form button[type="reset"] {
+  margin-left: 70%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.register-form label {
+  font-weight: 600;
+  font-size: 1.09rem;
+}
+
+.register-form div input,
+.register-form div select {
+  width: 100%;
+  height: 35%;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 0.2rem solid lightgray;
+  padding: 0 1%;
+  font-size: 1rem;
+}
+
+.register-form div input:focus,
+.register-form div select:focus {
+  border: 0.2rem solid #8aecf6;
+}
+
+select option {
+  text-align: center;
+}
+
+.register-form .btn-registrar {
+  margin-top: 10%;
+  width: 80%;
+  padding: 2%;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: #4789f4;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register-form .btn-registrar:hover {
+  transform: scale(1.015);
+  background-color: white;
+  border: 0.15rem solid #4789f4;
+  color: #4789f4;
+}
+
+.register-form .aviso {
+  text-align: center;
+  color: red;
+  font-weight: 700;
+}
+
+.container-monto {
+  width: 80%;
+  height: 50%;
+  border: 0.2rem solid #56eff8;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10%;
+  padding: 0 4%;
+}
+
+.container-monto img {
+  height: 70%;
+}
+
+.container-monto p {
+  font-size: 4rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container-monto p span {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .numbers,
+  .tabla,
+  .register-form,
+  .container-monto {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container-monto {
+    display: block;
+  }
+  .container-monto p {
+    font-size: 1.8rem;
+  }
+
+  @keyframes animacion {
+    0% {
+      font-size: 2rem;
+    }
+    100% {
+      font-size: 2.1rem;
+    }
   }
 }
