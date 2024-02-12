@@ -103,7 +103,7 @@
             <label for="nombre">Nombre:</label>
             <input
               type="text"
-              placeholder="Digita el nombre completo"
+              placeholder="Digite el nombre completo"
               id="nombre"
               name="nombre"
             />
@@ -164,7 +164,7 @@
                 <td style="color: green; font-weight: 600">
                   <?php echo $persona['EstadoPago']?>
                 </td>
-                <td>-</td>
+                <td>N.A</td>
                 <?php }else if($persona['EstadoPago']=='Debe'){ ?>
                 <td style="color: red; font-weight: 600">
                   <?php echo $persona['EstadoPago']?>

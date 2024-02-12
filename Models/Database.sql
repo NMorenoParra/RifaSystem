@@ -81,3 +81,6 @@ UPDATE Monto SET MontoTotal=MontoTotal+20000;
 END //
 
 DELIMITER ;
+
+CREATE PROCEDURE ConsultaNumerosDeshabilitados()
+SELECT*FROM Numero WHERE Estado = 1;
