@@ -1,6 +1,7 @@
 <?php
   include "../Models/model.php";
-?>
+  $instancia6 = new Persona();
+  $numeross = $instancia6->consultNumbersEnable(); ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -71,6 +72,22 @@
       </section>
       <!-- Formualario Registro -->
       <section id="registro" class="section hidden">
+        <?php 
+        if($numeross == null){
+        ?>
+        <div class="aviso-agotado">
+          <div style="text-align:center">
+            <h2 class="aviso-lleno">¡Rifa LLena!</h2>
+            <p>"Lo sentimos, la rifa ha alcanzado su capacidad máxima. No se aceptan más inscripciones."</p>
+          </div>
+          <img
+            src="../Views/full-cross-circle-alt-svgrepo-com.svg"
+            alt="Lleno"
+          />
+        </div>
+        <?php
+        }else{
+        ?>
         <form
           action="../Controllers/controller.php"
           method="post"
@@ -121,6 +138,7 @@
           </button>
           <p class="aviso" id="aviso"></p>
         </form>
+        <?php } ?>
       </section>
       <!-- Lista de personas -->
       <section id="lista" class="section hidden">
@@ -171,23 +189,26 @@
           </table>
         </div>
       </section>
+      <!-- Billetera del dinero -->
       <section id="dinero" class="section hidden">
         <?php
         $instancia4 = new Persona();
-        $monto = $instancia4->consultaMonto(); 
-        ?>
+        $monto = $instancia4->consultaMonto(); ?>
         <div class="container-monto">
           <img
             src="../Views/cash-financial-money-wallet-svgrepo-com.svg"
             alt="Imagen de Billetera"
           />
-          <p>El Monto Total reúnido es:  $
-            <span id="valor" data-number="<?php echo $monto[0]['MontoTotal'] ?>">
+          <p>
+            El Monto Total reúnido es: $
+            <span
+              id="valor"
+              data-number="<?php echo $monto[0]['MontoTotal'] ?>"
+            >
               <?php echo $monto[0]['MontoTotal'] ?>
             </span>
           </p>
         </div>
-
       </section>
     </main>
     <?php

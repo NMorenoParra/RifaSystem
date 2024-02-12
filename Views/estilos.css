@@ -339,11 +339,38 @@ select option {
   text-align: center;
 }
 
+.aviso-agotado {
+  width: 70%;
+  height: 50%;
+  border: 0.2rem solid #56eff8;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.aviso-agotado img {
+  height: 70%;
+}
+
+.aviso-agotado p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.aviso-agotado .aviso-lleno {
+  font-size: 3rem;
+  animation: none;
+  margin: 0;
+}
 @media (max-width: 600px) {
   .numbers,
   .tabla,
   .register-form,
-  .container-monto {
+  .container-monto,
+  .aviso-agotado {
     width: 100%;
     text-align: center;
   }

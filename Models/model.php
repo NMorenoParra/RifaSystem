@@ -34,5 +34,15 @@ class Persona {
         $table = $consultMonto->fetchAll(PDO::FETCH_ASSOC);
         return $table;
     }
+
+    public function consultNumbersEnable(){
+        include "connectionDB.php";
+
+      $consultEnable = $connection->prepare("CALL ConsultaNumerosDeshabilitados()");
+      $consultEnable->execute();
+
+        $table = $consultEnable->fetchAll(PDO::FETCH_ASSOC);
+        return $table;
+    }
 }
 ?>
