@@ -126,7 +126,7 @@
             </select>
           </div>
           <div>
-            <label for="estado">Estado de Pago:</label>
+            <label for="estado">Estado :</label>
             <select name="estado" id="estado">
               <option value="" selected>Seleccione una opcion</option>
               <option value="1">Pagado</option>
